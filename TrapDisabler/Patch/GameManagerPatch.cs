@@ -29,6 +29,18 @@ namespace TrapDisabler.Patch
                     }
                 }
             }
+            for (int j = 0; j < self.ItemsSpawnRate * 2; j++)
+            {
+                Item prefab = self.spawnableItemPrefabs.ToList().Grab(1).First();
+                Log.Message(prefab);
+                Log.Message(self.spawnableItemPrefabs.ToList().Grab(1).First());
+                self.spawnableItemPrefabs.ToList().Grab(2).First();
+                Transform andLockRandomItemSpawn2 = self.GetAndLockRandomItemSpawn();
+                if (andLockRandomItemSpawn2 != null)
+                {
+                    self.Runner.Spawn(prefab, andLockRandomItemSpawn2.position, andLockRandomItemSpawn2.rotation);
+                }
+            }
             if (!self.BattleRoyale)
             {
                 return;
