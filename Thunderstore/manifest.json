@@ -1,0 +1,10 @@
+{
+	"name": "TrapDisabler",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/LloydHawkeye/Lycans-TrapDisabler",
+	"description": "Permet de désactiver le spawn des pièges à loup.",
+	"dependencies": [
+		"BepInEx-BepInExPack-5.4.2100",
+		"LycansModding-HookGenPatcher-1.0.0"
+	]
+}
